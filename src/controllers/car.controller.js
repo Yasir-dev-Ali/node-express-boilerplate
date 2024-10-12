@@ -6,6 +6,8 @@ const { carService } = require('../services');
 
 const createCar = catchAsync(async (req, res) => {
   const car = await carService.createCar(req.body);
+  console.log(car)  
+  
   res.status(httpStatus.CREATED).send(car);
 });
 
